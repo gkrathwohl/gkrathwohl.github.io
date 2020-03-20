@@ -1,28 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>My page</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-    <script src="https://unpkg.com/react@latest/umd/react.production.min.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/react-dom@latest/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.development.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/babel-standalone@latest/babel.min.js" crossorigin="anonymous"></script>
-    <!-- Fonts to support Material Design -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-    <!-- Icons to support Material Design -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <style>
-    body {
-      background-color: #f9f9f9;
-    }
-
-
-    </style>
-    <script type="text/babel">
 const {
   colors,
   CssBaseline,
@@ -296,6 +271,3 @@ fetch("https://kylyqv8v1g.execute-api.us-east-1.amazonaws.com/todos")
       document.querySelector('#root'),
     );
   });
-    </script>
-  </body>
-</html>
