@@ -1,0 +1,20 @@
+<html>
+  <script>
+// http://localhost:8080/window_helper.html?gameUrl=http://codenames.game&meetUrl=https://meet.google.com/xvk-twcx-qyv
+
+const urlParams = new URLSearchParams(window.location.search);
+const gameUrl = urlParams.get('gameUrl');
+const meetUrl = urlParams.get('meetUrl');
+
+let gameParams = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+width=${screen.width * (2/3)},height=${screen.height},left=0,top=0`;
+
+open(gameUrl, '', gameParams);
+
+let meetParams = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+width=${screen.width * (1/3)},height=${screen.height},left=${screen.width * (2/3)},top=0`;
+
+open(meetUrl, '', meetParams);
+  </script>
+  <img width="60%" src="./images/popup.png">
+</html>
