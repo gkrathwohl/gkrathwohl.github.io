@@ -34,8 +34,8 @@
             <p>
                 The main application logic is handled by Lambda Functions. One Lambda (Web API) is exposed via the API Gateway. This handles all web requests,
                 including authentication, API requests from the frontend, and webhook calls from Strava.
-                It communicates with DynamoDB to save a user's data after they connect with Strava, and retreive summit data requested by the frontend.
-                When the Web API Lambda receives a webhook from Strava, it enqueues an SQS message, which triggers the second Lambda, Summit Finder.
+                It communicates with DynamoDB to save a user's data after they connect with Strava, and to retreive summit data requested by the frontend.
+                When the Web API Lambda receives a webhook from Strava about a new activity, it enqueues an SQS message that triggers the second Lambda, Summit Finder.
             </p>
             <p>
                 Summit Finder matches summits along the activity route and updates the description on Strava.
