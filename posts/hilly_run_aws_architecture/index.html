@@ -26,8 +26,8 @@
             <p>
                 All requests to hilly.run first go to Cloudfront, which forwards the requests to API Gateway.
                 If the path starts with <code>/api</code>, API Gateway forwards the request to the Web API Lambda.
-                Otherwise, the API Gateway looks for the resource in S3. So when the user reqeusts the root http://hilly.run, the request is routed to
-                S3, which responsds with the React Javascript Application. The React app then makes additional requests to http://hilly.run/api/users,
+                Otherwise, the API Gateway looks for the resource in S3. So when the user enters http://hilly.run, the request is routed to
+                S3, which responds with the React Javascript Application. The React app then makes additional requests to http://hilly.run/api/users,
                 which get routed to the Web API Lambda. Cloudfront isn't actually neccesary, but as a CDN it can improve performance.
                 It is also helpful for forwarding <code>HTTP</code> requests to <code>HTTPS</code>.
             </p>
@@ -41,7 +41,7 @@
                 Summit Finder matches summits along the activity route and updates the description on Strava.
                 The SQS message only contains the activity ID, so the Lambda first pulls the full activity route from Strava.
                 It then queries a local SQLite database for nearby summits, and checks to see if the activity route passes over
-                any of the summits. If it finds a matching summit, the Lambda saves that data into DynamoDB. Finally, it make an additional call to Strava to update the activity description with
+                any of the summits. If it finds a matching summit, the Lambda saves that data into DynamoDB. Finally, it makes an additional call to Strava to update the activity description with
                 the name of the summit.
             </p>
             <img class="descriptionImage" src="description.png"/>
